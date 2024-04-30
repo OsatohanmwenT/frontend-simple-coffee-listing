@@ -1,0 +1,204 @@
+:root{
+  --red: hsl(9, 80%, 65%);
+  --orange: hsl(40, 89%, 69%);
+  --cream: hsl(34, 89%, 96%);
+  --green: hsl(143, 40%, 82%);
+  --grey: hsl(212, 6%, 46%);
+  --black: hsl(210, 11%, 7%);
+  --dark-gray: hsl(220, 5%, 12%);
+  /*font size*/
+  --heading: 2rem;
+  --body: 1rem;
+  --label: 0.85rem;
+  --small: 0.625rem;
+  --price: 0.75rem;
+}
+
+*,
+*::after,
+*::before{
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../images/bg-cafe.jpg") no-repeat top center, var(--black);
+  background-size: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  padding: 4rem 5rem;
+}
+
+h1{
+  color: var(--cream);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+p{
+  font-size: 0.9rem;
+  color: var(--grey);
+  font-weight: 600;
+}
+
+.container{
+  margin-top: 10%;
+  margin-bottom: 2rem;
+  background: url("../images/vector.svg") top 1.7rem right 18rem no-repeat, var(--dark-gray);
+  display: grid;
+  place-items: center;
+  padding: 6rem;
+  border-radius: 1rem;
+  gap: 2rem;
+}
+
+.container .filter{
+  justify-self: center;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.container .filter button{
+  cursor: pointer;
+  border: none;
+  color: var(--cream);
+  font-weight: 600;
+  background: none;
+  border-radius: 0.7rem;
+  padding: 0.6rem 1rem;
+  transition: all 300ms ease;
+}
+
+.container .filter button.active{
+  background-color: var(--grey);
+}
+
+.container .filter button:hover{
+  background-color: var(--orange);
+}
+
+.header{
+  text-align: center;
+  max-width: 450px;
+  justify-self: center;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 2rem;
+}
+
+.card{
+  max-width: 260px;
+  position: relative;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: repeat(2,auto);
+  color: var(--cream);
+}
+
+.card .popular{
+  position: absolute;
+  background-color: var(--orange);
+  display: flex;
+  top: 10px;
+  left: 10px;
+  border-radius: 1rem;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--black);
+}
+
+.card .coffee-item{
+  border-radius: 1rem;
+}
+
+.card .info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+
+.card .info .name{
+  font-weight: 600;
+}
+
+.card .info .price{
+  background-color: var(--green);
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  color: var(--black);
+  font-weight: 600;
+}
+
+.card .bottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .rating{
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+}
+
+.card .rating .rating-text{
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.card .rating .rating-text span{
+  color: var(--grey);
+}
+
+.card .current-state{
+  color: var(--red);
+  font-size: 0.9rem;
+}
+
+@media(max-width: 65rem) {
+  .container{
+    padding: 4rem;
+  }
+}
+
+@media(max-width: 45rem) {
+  .cards{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
+
+  .container{
+    padding: 3rem;
+    background-position: top 1rem right 8rem;
+  }
+}
+
+@media(max-width: 40rem) {
+  .container{
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 35rem) {
+  body{
+    background-size: 40rem;
+  }
+  .cards{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,auto);
+  }
+  .container{
+    padding: 3rem 2rem;
+    background-position: top 1rem right 1rem;
+  }
+}
