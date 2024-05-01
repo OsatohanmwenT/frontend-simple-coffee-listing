@@ -13,8 +13,8 @@ export default function Card(props) {
                 </div>
                 <div className="bottom">
                     <div className="rating">
-                        {props.rating ? <><img src="./images/Star_fill.svg" alt="Star_fill" /><div className="rating-text">{props.rating} <span>({props.votes} votes)</span></div></> : 
-                        <><img src="./images/Star.svg" alt="Star" /><div className="rating-text" style={{color: "hsl(212, 6%, 46%)"}}>No rating</div></>}
+                        {props.rating ? <><img src="images/Star_fill.svg" alt="Star_fill" /><div className="rating-text">{props.rating} <span>({props.votes} votes)</span></div></> : 
+                        <><img src="images/Star.svg" alt="Star" /><div className="rating-text" style={{color: "hsl(212, 6%, 46%)"}}>No rating</div></>}
                     </div>
                     {!props.available && <span className="current-state">Sold out</span>}
                 </div>
