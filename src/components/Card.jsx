@@ -1,6 +1,6 @@
 import React from "react"
-import StarIcon from "../images/Star.svg"
-import StarIconF from "../images/Star_fill.svg"
+import StarIcon from "/images/Star.svg"
+import StarIconF from "/images/Star_fill.svg"
 
 export default function Card(props) {
     return(
